@@ -37,7 +37,6 @@ h1 {
   color: rgb(200, 175, 255);
   margin: 0 0 32px 0;
   padding: 16px;
-  border: 2px green solid;
 }
 
 .tabs p {
@@ -49,15 +48,29 @@ h1 {
   cursor: pointer;
 }
 
-.tabs p.active {
+.tabs .active {
   color: rgb(83, 49, 96);
+  position: relative;
 }
 
-/* underline in order to make it alwasy shrinkable */
+/* underline in order to make it always shrinkable */
 .line {
   height: 3px;
   width: 100%;
-  background-color: rgb(228, 46, 22);
+  background-color: rgb(158, 136, 133);
   position: absolute;
-  top: 95px;
+  top: 98px;
+  background-color: rgb(231, 231, 231);
+}
+
+.tabs .active::before {
+  content: "";
+  width: 150%;
+  height: 4px;
+  background-color: rgb(83, 49, 96);
+  position: absolute;
+  bottom: -32px;
+  z-index: 2;
+  left: -20%;
+  border-radius: 10px;
 }
