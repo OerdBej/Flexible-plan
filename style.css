@@ -11,9 +11,11 @@ body {
 
 h1 {
   color: rgba(83, 49, 156);
+  margin: 32px 0 64px 0;
 }
 
 .container {
+  box-sizing: border-box;
   background-color: white;
   width: 100%;
   max-width: 900px;
@@ -147,6 +149,7 @@ h1 {
 .slider {
   width: 100%;
   position: relative;
+  margin-bottom: 16px;
 }
 
 .slider .bar {
@@ -189,7 +192,7 @@ h1 {
 
 .slider .point:hover {
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 /* the scalability section of the users registers */
@@ -221,10 +224,13 @@ h1 {
   text-align: center;
   font-weight: bold;
   color: rgb(83, 49, 156);
-  text-transform: uppercase;
+  transition: 0.25s transform ease;
+  position: relative;
 }
 
 .card .top-section {
+  text-transform: uppercase;
+
   padding: 9px;
 }
 
@@ -240,4 +246,45 @@ h1 {
   width: 33%;
   border: 1px solid rgb(180, 155, 235);
   border-radius: 2.2px;
+}
+
+/* buttons */
+.cards-container button {
+  border: none;
+  background-color: rgb(83, 49, 156);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  transition: 0.15s transform ease;
+  font-weight: bold;
+  margin: 8px 0;
+}
+.card:hover {
+  transform: translateY(-18px);
+}
+
+.cards-container button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* saving section */
+.top-section .save {
+  color: white;
+  background: linear-gradient(
+    to left,
+    rgba(106, 17, 203, 0.5),
+    rgba(37, 117, 252, 0.5)
+  );
+  width: 100%;
+  position: absolute;
+  top: -24px;
+  left: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.save p {
+  padding: 0.5px 0;
+  margin: 3px 0;
 }
