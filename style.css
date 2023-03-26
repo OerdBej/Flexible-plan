@@ -119,12 +119,12 @@ h1 {
 .session-subscribers {
   background-color: rgb(250, 247, 255);
   text-align: center;
+  box-sizing: border-box;
   padding: 32px;
   width: 50%;
   text-transform: uppercase;
   margin: 16px 0;
-  border-radius: 10px;
-  margin-bottom: 16px 0 0 0;
+  border-radius: 16px;
 }
 
 .session-subscribers p {
@@ -287,4 +287,37 @@ h1 {
 .save p {
   padding: 0.5px 0;
   margin: 3px 0;
+}
+
+/* media query for responsivnes  */
+
+@media only screen and (max-width: 750px) {
+  .card {
+    width: 100%;
+  }
+  .cards-container {
+    flex-wrap: wrap-reverse;
+  }
+  .session-subscribers {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .body {
+    padding: 16px;
+  }
+  h1 {
+    margin: 0 0 16px 0;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  .session-subscribers {
+    width: 100%;
+  }
+  .toggle-wrapper {
+    width: 90%;
+    justify-content: space-around;
+  }
 }
